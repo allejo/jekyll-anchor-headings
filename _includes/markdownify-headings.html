@@ -46,7 +46,7 @@
         {% assign header = _workspace[0] | replace: _hAttrToStrip, '' %}
 
         <!-- Build the anchor to inject for our heading -->
-        {% capture anchor %}<a href="#{{ html_id}}"{% endcapture %}
+        {% capture anchor %}href="#{{ html_id}}"{% endcapture %}
 
         {% if include.anchorClass %}
             {% capture anchor %}{{ anchor }} class="{{ include.anchorClass }}"{% endcapture %}
@@ -56,7 +56,7 @@
             {% capture anchor %}{{ anchor }} title="{{ include.anchorTitle }}"{% endcapture %}
         {% endif %}
         
-        {% capture anchor %}{{ anchor }}>{{ include.anchorBody | replace: '%heading%', header | default: '' | raw }}</a>{% endcapture %}
+        {% capture anchor %}<a {{ anchor }}>{{ include.anchorBody | replace: '%heading%', header | default: '' | raw }}</a>{% endcapture %}
 
         <!-- The placement of our anchor, before the heading content or after -->
         {% if beforeHeading %}
