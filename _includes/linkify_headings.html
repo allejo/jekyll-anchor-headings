@@ -53,7 +53,7 @@
         {% endif %}
 
         {% if include.anchorTitle %}
-            {% capture anchor %}{{ anchor }} title="{{ include.anchorTitle }}"{% endcapture %}
+            {% capture anchor %}{{ anchor }} title="{{ include.anchorTitle | replace: '%heading%', header }}"{% endcapture %}
         {% endif %}
 
         {% capture anchor %}<a {{ anchor }}>{{ include.anchorBody | replace: '%heading%', header | default: '' | raw }}</a>{% endcapture %}
