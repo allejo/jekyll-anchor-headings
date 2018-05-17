@@ -6,7 +6,7 @@
 {% endcapture %}
 {% assign text = markdown | markdownify %}
 
-{% include linkify_headings.html html=text anchorTitle="Link to '%heading%'" %}
+{% include anchor_headings.html html=text anchorTitle="Link to '%heading%'" %}
 
 <!-- /// -->
 

@@ -20,12 +20,12 @@ As a part of my "Pure Liquid" series of Jekyll snippets, here is a Liquid snippe
 
 Alright, so how do you use it?
 
-1. Download the latest [`linkify_headings.html`](_includes/linkify_headings.html)
+1. Download the latest [`anchor_headings.html`](_includes/anchor_headings.html)
 2. Toss that file in your `_includes` folder
 3. Where you typically would put `{{ content }}` in your layout, you would instead use this Liquid tag to output your page's content:
 
    ```liquid
-   {% include linkify_headings.html html=content %}
+   {% include anchor_headings.html html=content %}
    ```
 
 ## Parameters

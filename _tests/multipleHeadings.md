@@ -13,7 +13,7 @@
 {% assign text = markdown | markdownify %}
 
 <div>
-{% include linkify_headings.html html=text %}
+{% include anchor_headings.html html=text %}
 </div>
 
 <!-- /// -->

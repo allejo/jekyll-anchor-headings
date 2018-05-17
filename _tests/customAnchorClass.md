@@ -6,7 +6,7 @@
 {% endcapture %}
 {% assign text = markdown | markdownify %}
 
-{% include linkify_headings.html html=text anchorClass="permalink" %}
+{% include anchor_headings.html html=text anchorClass="permalink" %}
 
 <!-- /// -->
 

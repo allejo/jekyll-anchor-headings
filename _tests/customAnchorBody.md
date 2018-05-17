@@ -11,7 +11,7 @@
     <i class="fa fa-link" aria-hidden="true"></i>
 {% endcapture %}
 
-{% include linkify_headings.html html=text anchorBody=anchor %}
+{% include anchor_headings.html html=text anchorBody=anchor %}
 
 <!-- /// -->
 

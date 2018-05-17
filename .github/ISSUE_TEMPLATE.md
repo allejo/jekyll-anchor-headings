@@ -1,5 +1,5 @@
 <!--
-  If you're submitting an issue with what was rendered by linkify_headings.html,
+  If you're submitting an issue with what was rendered by anchor_headings.html,
   please follow this template.
 
   If you're requesting a feature, feel free to discard this template and
@@ -21,14 +21,14 @@
 **Snippet Usage**
 
 <!--
-  How are you using the linkify_headings.html include?
+  How are you using the anchor_headings.html include?
 
   Specify the parameters you're using in your {% include %}; that means
   values you're setting for `h_min`, `sanitize`, etc.
 -->
 
 ```liquid
-{% include linkify_headings.html html=content %}
+{% include anchor_headings.html html=content %}
 ```
 
 **Expected HTML**
