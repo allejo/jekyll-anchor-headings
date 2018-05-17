@@ -1,6 +1,6 @@
 # Jekyll Pure Liquid Heading Anchors
 
-[![Build Status](https://travis-ci.com/allejo/jekyll-headings.svg?branch=master)](https://travis-ci.com/allejo/jekyll-headings)
+[![Build Status](https://travis-ci.com/allejo/jekyll-anchor-headings.svg?branch=master)](https://travis-ci.com/allejo/jekyll-anchor-headings)
 
 > :warning: :construction: :construction: :construction: :warning:
 >
