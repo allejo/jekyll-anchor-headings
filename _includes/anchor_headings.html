@@ -1,6 +1,6 @@
 {% capture headingsWorkspace %}
     {% comment %}
-        Version 1.0.0-RC2
+        Version 1.0.0-RC3
           https://github.com/allejo/jekyll-headings
 
         "Be the pull request you wish to see in the world." ~Ben Balter
@@ -49,24 +49,34 @@
             {% assign header = _workspace[0] | replace: _hAttrToStrip, '' %}
 
             <!-- Build the anchor to inject for our heading -->
-            {% capture anchor %}href="#{{ html_id}}"{% endcapture %}
+            {% capture anchor %}{% endcapture %}
 
-            {% if include.anchorClass %}
-                {% capture anchor %}{{ anchor }} class="{{ include.anchorClass }}"{% endcapture %}
+            {% if html_id %}
+                {% capture anchor %}href="#{{ html_id}}"{% endcapture %}
+
+                {% if include.anchorClass %}
+                    {% capture anchor %}{{ anchor }} class="{{ include.anchorClass }}"{% endcapture %}
+                {% endif %}
+
+                {% if include.anchorTitle %}
+                    {% capture anchor %}{{ anchor }} title="{{ include.anchorTitle | replace: '%heading%', header }}"{% endcapture %}
+                {% endif %}
+
+                {% capture anchor %}<a {{ anchor }}>{{ include.anchorBody | replace: '%heading%', header | default: '' | raw }}</a>{% endcapture %}
+
+                {% if beforeHeading %}
+                    {% capture anchor %}{{ anchor }} {% endcapture %}
+                {% else %}
+                    {% capture anchor %} {{ anchor }}{% endcapture %}
+                {% endif %}
             {% endif %}
-
-            {% if include.anchorTitle %}
-                {% capture anchor %}{{ anchor }} title="{{ include.anchorTitle | replace: '%heading%', header }}"{% endcapture %}
-            {% endif %}
-
-            {% capture anchor %}<a {{ anchor }}>{{ include.anchorBody | replace: '%heading%', header | default: '' | raw }}</a>{% endcapture %}
 
             <!-- The placement of our anchor, before the heading content or after -->
             {% if beforeHeading %}
-                {% capture _current %}<h{{ _hAttrToStrip | raw }}{{ anchor }} {% endcapture %}
+                {% capture _current %}<h{{ _hAttrToStrip | raw }}{{ anchor }}{% endcapture %}
                 {% capture edited_headings %}{{ edited_headings }}{{ node | replace: _hAttrToStrip, _current | raw }}{% endcapture %}
             {% else %}
-                {% capture _current %}<h{{ _workspace | first }} {{ anchor }}</h{{ _workspace | last }}{% endcapture %}
+                {% capture _current %}<h{{ _workspace | first }}{{ anchor }}</h{{ _workspace | last }}{% endcapture %}
                 {% capture edited_headings %}{{ edited_headings }}{{ _current }}{% endcapture %}
             {% endif %}
         {% endfor %}
