@@ -39,8 +39,8 @@ This snippet is highly customizable. Here are the available parameters to change
 | `anchorBody`    | string | ''    | The content that will be placed inside the anchor; the `%heading%` placeholder is available |
 | `anchorClass`   | string | ''    | The class(es) that will be used for each anchor. Separate multiple classes with a space |
 | `anchorTitle`   | string | ''    | The `title` attribute that will be used for anchors; the `%heading%` placeholder is available |
-| `h_min`         | int    | 1     | the minimum TOC header level to use; any heading lower than this value will be ignored |
-| `h_max`         | int    | 6     | the maximum TOC header level to use; any heading greater than this value will be ignored |
+| `h_min`         | int    | 1     | The minimum header level to build an anchor for; any header lower than this value will be ignored |
+| `h_max`         | int    | 6     | The maximum header level to build an anchor for; any header greater than this value will be ignored |
 
 <sup>*</sup> This is a required parameter
 
