@@ -16,7 +16,7 @@ def test_generator(a, b):
 
 def normalize_xml(xml):
     tree = ET.fromstring(xml)
-    return re.sub('\\n\s+', '', ET.tostring(tree))
+    return re.sub('\\n\s+|\\n', '', ET.tostring(tree))
 
 if __name__ == '__main__':
     test_path = os.path.join(os.getcwd(), '_site', 'tests')
