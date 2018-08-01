@@ -2,19 +2,15 @@
 
 [![Build Status](https://travis-ci.com/allejo/jekyll-anchor-headings.svg?branch=master)](https://travis-ci.com/allejo/jekyll-anchor-headings)
 
-> :warning: :construction: :construction: :construction: :warning:
->
-> This is an incredibly young project and has not had much exposure to the real world. So I'd like to ask that if you're reading this, please help me out in one (or all) of the following ways:
->
-> - Report any bugs you may find
-> - Build your website with `--profile` and send me stats on your total build time, the amount of time this snippet takes, and the amount of times this snippet is used in your site
-> - Star the project and share it with your friends!
->
-> I'd like to tag a version **1.0.0**, but would like some real world testing to be done first.
+GitHub Pages can't run custom Jekyll plug-ins so when generating anchors for your headings (i.e. `h1` - `h6`), you're stuck with JavaScript solutions that will inject anchors. But what if your users don't have JavaScript enabled on their browsers? If you're building a static website, why not make your anchors static as well?
 
-GitHub Pages can't run custom Jekyll plug-ins so when generating anchors for your headings (i.e. `h1` - `h6`), you're stuck with JavaScript solutions that will inject anchors. But what if your users don't have JavaScript enabled on their browsers? If you're building a static website, might as well inject your anchors.
+<p align="center">
+   <img src=".github/assets/screenshot.png" alt="Sample anchor next to heading">
+</p>
 
-As a part of my "Pure Liquid" series of Jekyll snippets, here is a Liquid snippet that will modify your generated HTML to inject anchors.
+As a part of my "Pure Liquid" series of Jekyll snippets, here is a Liquid snippet that will modify your generated HTML to inject anchors. Want to see it in action? Here are some awesome websites that I know of using this solution :heart:.
+
+- [Travis CI Docs](https://github.com/travis-ci/docs-travis-ci-com/pull/1909) (fixed in [#1960](https://github.com/travis-ci/docs-travis-ci-com/pull/1960))
 
 ## Usage
 
@@ -43,6 +39,18 @@ This snippet is highly customizable. Here are the available parameters to change
 | `h_max`         | int    | 6     | The maximum header level to build an anchor for; any header greater than this value will be ignored |
 
 <sup>*</sup> This is a required parameter
+
+## Performance
+
+The performance impact of this snippet on your site is pretty negligible. The stats below were gotten from Jekyll's `--profile` option.
+
+```
+Filename                                         | Count |    Bytes |  Time
+-------------------------------------------------+-------+----------+------
+
+# performance on docs.travis-ci.com from ~Aug 2018
+_includes/anchor_headings.html                   |   193 | 1667.96K | 0.695
+```
 
 ## License
 
