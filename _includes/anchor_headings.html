@@ -1,6 +1,6 @@
 {% capture headingsWorkspace %}
   {% comment %}
-    Version 1.0.0
+    Version 1.0.1
       https://github.com/allejo/jekyll-anchor-headings
 
     "Be the pull request you wish to see in the world." ~Ben Balter
@@ -18,10 +18,16 @@
       * anchorTitle   (string) :  ''    - The `title` attribute that will be used for anchors
       * h_min         (int)    :  1     - The minimum header level to build an anchor for; any header lower than this value will be ignored
       * h_max         (int)    :  6     - The maximum header level to build an anchor for; any header greater than this value will be ignored
+      * bodyPrefix    (string) :  ''    - Anything that should be inserted inside of the heading tag _before_ its anchor and content
+      * bodySuffix    (string) :  ''    - Anything that should be inserted inside of the heading tag _after_ its anchor and content
 
     Output:
       The original HTML with the addition of anchors inside of all of the h1-h6 headings.
   {% endcomment %}
+
+<!-- We need a newline character, so the lack of indentation here is important -->
+{% capture new_line %}
+{% endcapture %}
 
   {% assign minHeader = include.h_min | default: 1 %}
   {% assign maxHeader = include.h_max | default: 6 %}
@@ -65,8 +71,9 @@
         {% capture anchor %}{{ anchor }} title="{{ include.anchorTitle | replace: '%heading%', header }}"{% endcapture %}
       {% endif %}
 
-      {% capture anchor %}<a {{ anchor }}>{{ include.anchorBody | replace: '%heading%', header | default: '' | raw }}</a>{% endcapture %}
+      {% capture anchor %}<a {{ anchor }}>{{ include.anchorBody | replace: '%heading%', header | default: '' }}</a>{% endcapture %}
 
+      <!-- In order to prevent adding extra space after a heading, we'll let the 'anchor' value contain it -->
       {% if beforeHeading %}
         {% capture anchor %}{{ anchor }} {% endcapture %}
       {% else %}
@@ -74,13 +81,17 @@
       {% endif %}
     {% endif %}
 
-    <!-- The placement of our anchor, before the heading content or after -->
-    {% if beforeHeading %}
-      {% capture _current %}<h{{ _hAttrToStrip | raw }}{{ anchor }}{% endcapture %}
-      {% capture edited_headings %}{{ edited_headings }}{{ node | replace: _hAttrToStrip, _current | raw }}{% endcapture %}
-    {% else %}
-      {% capture _current %}<h{{ _workspace | first }}{{ anchor }}</h{{ _workspace | last }}{% endcapture %}
-      {% capture edited_headings %}{{ edited_headings }}{{ _current }}{% endcapture %}
-    {% endif %}
+    {% capture new_heading %}
+      <h{{ _hAttrToStrip }}
+        {{ include.bodyPrefix }}
+        {% if beforeHeading %}
+          {{ anchor }}{{ header }}
+        {% else %}
+          {{ header }}{{ anchor }}
+        {% endif %}
+        {{ include.bodySuffix }}
+      </h{{ _workspace | last }}
+    {% endcapture %}
+    {% capture edited_headings %}{{ edited_headings }}{{ new_heading | replace: '  ', '' | replace: new_line, '' }}{{ new_line }}{% endcapture %}
   {% endfor %}
 {% endcapture %}{% assign headingsWorkspace = '' %}{{ edited_headings | strip }}
