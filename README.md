@@ -37,6 +37,8 @@ This snippet is highly customizable. Here are the available parameters to change
 | `anchorTitle`   | string | ''    | The `title` attribute that will be used for anchors; the `%heading%` placeholder is available |
 | `h_min`         | int    | 1     | The minimum header level to build an anchor for; any header lower than this value will be ignored |
 | `h_max`         | int    | 6     | The maximum header level to build an anchor for; any header greater than this value will be ignored |
+| `bodyPrefix`    | string | ''    | Anything that should be inserted inside of the heading tag _before_ its anchor and content |
+| `bodySuffix`    | string | ''    | Anything that should be inserted inside of the heading tag _after_ its anchor and content |
 
 <sup>*</sup> This is a required parameter
 
