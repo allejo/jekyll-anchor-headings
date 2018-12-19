@@ -25,10 +25,6 @@
       The original HTML with the addition of anchors inside of all of the h1-h6 headings.
   {% endcomment %}
 
-<!-- We need a newline character, so the lack of indentation here is important -->
-{% capture new_line %}
-{% endcapture %}
-
   {% assign minHeader = include.h_min | default: 1 %}
   {% assign maxHeader = include.h_max | default: 6 %}
   {% assign beforeHeading = include.beforeHeading %}
@@ -92,6 +88,6 @@
         {{ include.bodySuffix }}
       </h{{ _workspace | last }}
     {% endcapture %}
-    {% capture edited_headings %}{{ edited_headings }}{{ new_heading | replace: '  ', '' | replace: new_line, '' }}{{ new_line }}{% endcapture %}
+    {% capture edited_headings %}{{ edited_headings }}{{ new_heading }}{% endcapture %}
   {% endfor %}
 {% endcapture %}{% assign headingsWorkspace = '' %}{{ edited_headings | strip }}
