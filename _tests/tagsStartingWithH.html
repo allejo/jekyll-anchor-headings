@@ -1,0 +1,34 @@
+---
+# See https://github.com/allejo/jekyll-anchor-headings/issues/9
+---
+
+{% capture markdown %}
+Some introduction paragraph
+
+<header>
+  some header
+</header>
+
+# Hello World
+
+<head>
+  this shouldn't ever been in HTML, but it shouldn't break either
+</head>
+
+<hgroup>I can see the future</hgroup>
+{% endcapture %}
+{% assign text = markdown | markdownify %}
+
+<div>
+{% include anchor_headings.html html=text %}
+</div>
+
+<!-- /// -->
+
+<div>
+  <p>Some introduction paragraph</p>
+  <header>some header</header>
+  <h1 id="hello-world">Hello World <a href="#hello-world"></a></h1>
+  <head>this shouldn't ever been in HTML, but it shouldn't break either</head>
+  <hgroup>I can see the future</hgroup>
+</div>

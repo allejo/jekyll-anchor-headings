@@ -1,6 +1,6 @@
 {% capture headingsWorkspace %}
   {% comment %}
-    Version 1.0.2
+    Version 1.0.3
       https://github.com/allejo/jekyll-anchor-headings
 
     "Be the pull request you wish to see in the world." ~Ben Balter
@@ -32,15 +32,22 @@
 
   {% capture edited_headings %}{% endcapture %}
 
-  {% for node in nodes %}
+  {% for _node in nodes %}
+    {% capture node %}{{ _node | strip }}{% endcapture %}
+
     {% if node == "" %}
       {% continue %}
     {% endif %}
 
-    {% assign headerLevel = node | replace: '"', '' | slice: 0, 1 | times: 1 %}
+    {% assign nextChar = node | replace: '"', '' | strip | slice: 0, 1 %}
+    {% assign headerLevel = nextChar | times: 1 %}
 
-    <!-- If the node doesn't have a header, then it's content before the first heading; don't discard it -->
-    {% if headerLevel < 1 or headerLevel > 6 %}
+    <!-- If the level is cast to 0, it means it's not a h1-h6 tag, so let's try to fix it -->
+    {% if headerLevel == 0 %}
+      {% if nextChar != '<' and nextChar != '' %}
+        {% capture node %}<h{{ node }}{% endcapture %}
+      {% endif %}
+
       {% capture edited_headings %}{{ edited_headings }}{{ node }}{% endcapture %}
       {% continue %}
     {% endif %}

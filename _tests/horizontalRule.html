@@ -1,0 +1,30 @@
+---
+# See https://github.com/allejo/jekyll-anchor-headings/issues/9
+---
+
+{% capture markdown %}
+Starting content
+
+# Heading 1
+
+I can show you the world
+
+---
+
+...or maybe not.
+{% endcapture %}
+{% assign text = markdown | markdownify %}
+
+<div>
+{% include anchor_headings.html html=text %}
+</div>
+
+<!-- /// -->
+
+<div>
+<p>Starting content</p>
+<h1 id="heading-1">Heading 1 <a href="#heading-1"></a></h1>
+<p>I can show you the world</p>
+<hr />
+<p>…or maybe not.</p>
+</div>
