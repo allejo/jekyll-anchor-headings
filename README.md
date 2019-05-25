@@ -1,6 +1,9 @@
 # Jekyll Pure Liquid Heading Anchors
 
 [![Build Status](https://travis-ci.com/allejo/jekyll-anchor-headings.svg?branch=master)](https://travis-ci.com/allejo/jekyll-anchor-headings)
+[![Latest release](https://img.shields.io/github/release/allejo/jekyll-anchor-headings.svg)](https://github.com/allejo/jekyll-anchor-headings/releases/latest)
+[![ko-fi](https://img.shields.io/static/v1.svg?label=&message=Support%20me%20on%20Ko-fi&color=333&logo=ko-fi)](https://ko-fi.com/Q5Q4J7IX)
+[![Buy me a coffee](https://img.shields.io/static/v1.svg?label=&message=Buy%20me%20a%20coffee&color=333&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/allejo)
 
 GitHub Pages can't run custom Jekyll plug-ins so when generating anchors for your headings (i.e. `h1` - `h6`), you're stuck with JavaScript solutions that will inject anchors. But what if your users don't have JavaScript enabled on their browsers? If you're building a static website, why not make your anchors static as well?
 
@@ -11,6 +14,17 @@ GitHub Pages can't run custom Jekyll plug-ins so when generating anchors for you
 As a part of my "Pure Liquid" series of Jekyll snippets, here is a Liquid snippet that will modify your generated HTML to inject anchors. Want to see it in action? Here are some awesome websites that I know of using this solution :heart:.
 
 - [Travis CI Docs](https://github.com/travis-ci/docs-travis-ci-com/pull/1909) (fixed in [#1960](https://github.com/travis-ci/docs-travis-ci-com/pull/1960))
+- [Bitrise's Documentation](https://github.com/bitrise-io/devcenter/pull/291)
+- [di's personal website](https://github.com/di/di.github.com/commit/4016cbdcc89ea1e42efafd55cda468764c350a71#diff-bc0451638729253193317f14b833a89e)
+- [sitespeed.io](https://github.com/sitespeedio/sitespeed.io/commit/e9e33bbcb8dca21391f14d73d0ba52145f21f7ed)
+- [Duality's developer docs](https://github.com/AdamsLair/duality-docs/commit/37370414fb312b59a52378f3d1f8bcd8c52e448d)
+- [Australia's Vote Flux campaign](https://github.com/voteflux/flux-website-v2/commit/07f32e1db6e462595ded9ebac8496588bed8b6e7#diff-bc0451638729253193317f14b833a89e)
+- [mlpack.org](https://github.com/mlpack/mlpack.org/commit/7320b0f760ccbc0eeb5d76a0e20a4d266e2775b6)
+- [Riot.js v4 website](https://github.com/riot/next/commit/27b0fd4ad856bb7fb154f450fa6b6e9f0c89b485)
+
+> **Want a Table of Contents in your Jekyll layouts without JavaScript or a plug-in?**
+>
+> Check out the sister project over at [allejo/jekyll-toc](https://github.com/allejo/jekyll-toc).
 
 ## Usage
 
