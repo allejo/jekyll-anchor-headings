@@ -20,7 +20,7 @@ As a part of my "Pure Liquid" series of Jekyll snippets, here is a Liquid snippe
 - [Duality's developer docs](https://github.com/AdamsLair/duality-docs/commit/37370414fb312b59a52378f3d1f8bcd8c52e448d)
 - [Australia's Vote Flux campaign](https://github.com/voteflux/flux-website-v2/commit/07f32e1db6e462595ded9ebac8496588bed8b6e7#diff-bc0451638729253193317f14b833a89e)
 - [mlpack.org](https://github.com/mlpack/mlpack.org/commit/7320b0f760ccbc0eeb5d76a0e20a4d266e2775b6)
-- [Riot.js v4 website](https://github.com/riot/next/commit/27b0fd4ad856bb7fb154f450fa6b6e9f0c89b485)
+- [Riot.js website](https://github.com/riot/riot.github.io/blob/1a9749b97115b4169955820159e50bc72f137b7b/_includes/anchor_headings.html)
 - ["Just the Docs" Jekyll theme](https://github.com/pmarsceill/just-the-docs/commit/03e2345833f92d6f3841db66bffd0f2ed8461bf2)
 - [Microsoft's TypeScript website](https://github.com/microsoft/TypeScript-Website/blob/52ca8592b221550af648fc0af9c231bf765eff8b/src/_includes/anchor_headings.html)
 
