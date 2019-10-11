@@ -1,0 +1,14 @@
+---
+# See https://github.com/allejo/jekyll-anchor-headings/issues/12
+---
+
+{% capture markdown %}
+# My Heading
+{% endcapture %}
+{% assign text = markdown | markdownify %}
+
+{% include anchor_headings.html html=text anchorAttrs='aria-hidden="true"' %}
+
+<!-- /// -->
+
+<h1 id="my-heading">My Heading <a href="#my-heading" aria-hidden="true"></a></h1>
