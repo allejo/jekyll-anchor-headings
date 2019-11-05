@@ -23,6 +23,7 @@ As a part of my "Pure Liquid" series of Jekyll snippets, here is a Liquid snippe
 - [Riot.js website](https://github.com/riot/riot.github.io/blob/1a9749b97115b4169955820159e50bc72f137b7b/_includes/anchor_headings.html)
 - ["Just the Docs" Jekyll theme](https://github.com/pmarsceill/just-the-docs/commit/03e2345833f92d6f3841db66bffd0f2ed8461bf2)
 - [Microsoft's TypeScript website](https://github.com/microsoft/TypeScript-Website/blob/52ca8592b221550af648fc0af9c231bf765eff8b/src/_includes/anchor_headings.html)
+- [VMWare's Octant documentation](https://github.com/vmware-tanzu/octant/commit/4db5dee7eeee6e580df9519b07907ac40dbd87b0#diff-e093f684d412b760130734e02973c4d7)
 
 > **Want a Table of Contents in your Jekyll layouts without JavaScript or a plug-in?**
 >
