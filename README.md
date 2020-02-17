@@ -41,6 +41,10 @@ Alright, so how do you use it?
    {% include anchor_headings.html html=content %}
    ```
 
+### Layout Inheritance
+
+If this snippet is used in a layout that is inherited by a child layout, it will apply to the child layout as well. If the child layout uses this snippet in addition to the parent layout, then heading anchors will be duplicated. You should only use this snippet in one layout.
+
 ## Parameters
 
 This snippet is highly customizable. Here are the available parameters to change the behavior of the snippet.

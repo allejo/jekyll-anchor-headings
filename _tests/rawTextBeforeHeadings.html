@@ -1,0 +1,29 @@
+---
+# See https://github.com/allejo/jekyll-anchor-headings/issues/13
+---
+
+{% capture text %}
+Some text<p data-name="short_description">Defines which sample file the region will play.</p>
+
+<p>Possibly the most important opcode, this is the one that tells the sampler which
+sample file to actually play. This should include a relative file path from the
+folder where the SFZ file is.</p>
+
+<h2 id="examples">Examples</h2>
+{% endcapture %}
+
+<div>
+{% include anchor_headings.html html=text %}
+</div>
+
+<!-- /// -->
+
+<div>
+    Some text<p data-name="short_description">Defines which sample file the region will play.</p>
+
+    <p>Possibly the most important opcode, this is the one that tells the sampler which
+    sample file to actually play. This should include a relative file path from the
+    folder where the SFZ file is.</p>
+
+    <h2 id="examples">Examples <a href="#examples"></a></h2>
+</div>
