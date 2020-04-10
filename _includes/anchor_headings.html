@@ -1,6 +1,6 @@
 {% capture headingsWorkspace %}
   {% comment %}
-    Version 1.0.5
+    Version 1.0.6
       https://github.com/allejo/jekyll-anchor-headings
 
     "Be the pull request you wish to see in the world." ~Ben Balter
@@ -13,7 +13,8 @@
 
     Optional Parameters:
       * beforeHeading (bool)   : false  - Set to true if the anchor should be placed _before_ the heading's content
-      * anchorAttrs   (string) :  ''    - Any custom HTML attributes that will be added to the `<a>` tag; you may NOT use `href`, `class` or `title`
+      * anchorAttrs   (string) :  ''    - Any custom HTML attributes that will be added to the `<a>` tag; you may NOT use `href`, `class` or `title`;
+                                          the `%heading%` placeholder is available
       * anchorBody    (string) :  ''    - The content that will be placed inside the anchor; the `%heading%` placeholder is available
       * anchorClass   (string) :  ''    - The class(es) that will be used for each anchor. Separate multiple classes with a space
       * anchorTitle   (string) :  ''    - The `title` attribute that will be used for anchors
@@ -80,7 +81,7 @@
       {% endif %}
 
       {% if include.anchorAttrs %}
-        {% capture anchor %}{{ anchor }} {{ include.anchorAttrs }}{% endcapture %}
+        {% capture anchor %}{{ anchor }} {{ include.anchorAttrs | replace: '%heading%', header }}{% endcapture %}
       {% endif %}
 
       {% capture anchor %}<a {{ anchor }}>{{ include.anchorBody | replace: '%heading%', header | default: '' }}</a>{% endcapture %}
