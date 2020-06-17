@@ -38,12 +38,18 @@ Alright, so how do you use it?
 3. Where you typically would put `{{ content }}` in your layout, you would instead use this Liquid tag to output your page's content:
 
    ```liquid
-   {% include anchor_headings.html html=content %}
+   {% include anchor_headings.html html=content anchorBody="#" %}
    ```
 
-### Layout Inheritance
+### :warning: Layout Inheritance
 
 If this snippet is used in a layout that is inherited by a child layout, it will apply to the child layout as well. If the child layout uses this snippet in addition to the parent layout, then heading anchors will be duplicated. You should only use this snippet in one layout.
+
+### :art: Customization
+
+You may remove `anchorBody` and add an icon via [CSS' `content` property](https://developer.mozilla.org/en-US/docs/Web/CSS/content) instead. You may also use HTML in `anchorBody` and add [screen reader friendly markup](_tests/customAnchorBody.html).
+
+Take a look at the [unit tests directory](_tests/) for more examples of how to use this script.
 
 ## Parameters
 
