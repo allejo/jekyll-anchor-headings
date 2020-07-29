@@ -49,7 +49,7 @@ If this snippet is used in a layout that is inherited by a child layout, it will
 
 You may remove `anchorBody` and add an icon via [CSS' `content` property](https://developer.mozilla.org/en-US/docs/Web/CSS/content) instead. You may also use HTML in `anchorBody` and add [screen reader friendly markup](_tests/customAnchorBody.html).
 
-Take a look at the [unit tests directory](_tests/) for more examples of how to use this script.
+Take a look at the [unit tests directory](_tests/) and [the wiki page](https://github.com/allejo/jekyll-anchor-headings/wiki/Examples) for more examples of how to use this script.
 
 ## Parameters
 
