@@ -10,6 +10,8 @@ exclude:
   - tests.py
   - vendor
 
+theme: null
+
 collections:
   tests:
     output: true
