@@ -34,12 +34,12 @@ jobs:
           ruby-version: '2.5'
 
       - name: Configure Jekyll
-        if: ${{ matrix.jekyll-versions != "(GitHub Pages)" }}
+        if: matrix.jekyll-versions != "(GitHub Pages)"
         run: |
           bundle add jekyll --version="~>${{ matrix.jekyll-versions }}"
 
       - name: Configure Jekyll for GitHub Pages
-        if: ${{ matrix.jekyll-versions == "(GitHub Pages)" }}
+        if: matrix.jekyll-versions == "(GitHub Pages)"
         run: |
           bundle add github-pages
 
