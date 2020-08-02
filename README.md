@@ -1,6 +1,6 @@
 # Jekyll Pure Liquid Heading Anchors
 
-[![Build Status](https://travis-ci.com/allejo/jekyll-anchor-headings.svg?branch=master)](https://travis-ci.com/allejo/jekyll-anchor-headings)
+[![Unit Tests](https://github.com/allejo/jekyll-anchor-headings/workflows/Unit%20Tests/badge.svg)](https://github.com/allejo/jekyll-anchor-headings/actions?query=workflow%3A%22Unit+Tests%22)
 [![Latest release](https://img.shields.io/github/release/allejo/jekyll-anchor-headings.svg)](https://github.com/allejo/jekyll-anchor-headings/releases/latest)
 [![ko-fi](https://img.shields.io/static/v1.svg?label=&message=Support%20me%20on%20Ko-fi&color=333&logo=ko-fi)](https://ko-fi.com/Q5Q4J7IX)
 [![Buy me a coffee](https://img.shields.io/static/v1.svg?label=&message=Buy%20me%20a%20coffee&color=333&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/allejo)
