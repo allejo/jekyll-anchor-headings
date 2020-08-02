@@ -41,7 +41,7 @@ jobs:
       - name: Configure Jekyll for GitHub Pages
         if: matrix.jekyll-versions == '(GitHub Pages)'
         run: |
-          sudo apt-get install -y libxslt
+          sudo apt install -y libxslt-dev
           gem install pkg-config
           bundle add github-pages
 
