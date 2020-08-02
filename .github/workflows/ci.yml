@@ -41,6 +41,7 @@ jobs:
       - name: Configure Jekyll for GitHub Pages
         if: matrix.jekyll-versions == '(GitHub Pages)'
         run: |
+          gem install pkg-config
           bundle add github-pages
 
       - name: Run unit tests
