@@ -1,0 +1,13 @@
+---
+---
+
+{% capture markdown %}
+# Heading 1
+{% endcapture %}
+{% assign text = markdown | markdownify %}
+
+{% include anchor_headings.html html=text anchorAttrs='aria-labeledby="%html_id%" aria-label="Link to &quot;%heading%&quot;"' %}
+
+<!-- /// -->
+
+<h1 id="heading-1">Heading 1 <a href="#heading-1" aria-labeledby="heading-1" aria-label="Link to &quot;Heading 1&quot;"></a></h1>
