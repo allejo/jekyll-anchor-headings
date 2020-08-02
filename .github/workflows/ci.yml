@@ -33,7 +33,7 @@ jobs:
         with:
           ruby-version: '2.5'
 
-      - name: Configure Jekyll unit tests
+      - name: Configure Jekyll
         if: ${{ matrix.jekyll-versions }} != "(GitHub Pages)"
         run: |
           bundle add jekyll --version="~>${{ matrix.jekyll-versions }}"
