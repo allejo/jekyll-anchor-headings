@@ -1,0 +1,13 @@
+---
+---
+
+{% capture markdown %}
+# Heading 1
+{% endcapture %}
+{% assign text = markdown | markdownify %}
+
+{% include anchor_headings.html html=text headerAttrs='data-original-title="The original was %quot;%heading%&quot;"' %}
+
+<!-- /// -->
+
+<h1 id="heading-1" data-original-title="The original was %quot;%Heading 1%&quot;">Heading 1 <a href="#heading-1"></a></h1>
