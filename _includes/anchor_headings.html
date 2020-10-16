@@ -37,6 +37,8 @@
 
     Optional Parameters:
       * beforeHeading (bool)   : false  - Set to true if the anchor should be placed _before_ the heading's content
+      * headerAttrs   (string) :  ''    - Any custom HTML attributes that will be added to the header tag; you may NOT use `href`, `class` or `title`;
+                                          the `%heading%` and `%html_id%` placeholders are available
       * anchorAttrs   (string) :  ''    - Any custom HTML attributes that will be added to the `<a>` tag; you may NOT use `href`, `class` or `title`;
                                           the `%heading%` and `%html_id%` placeholders are available
       * anchorBody    (string) :  ''    - The content that will be placed inside the anchor; the `%heading%` placeholder is available
@@ -46,8 +48,6 @@
       * h_max         (int)    :  6     - The maximum header level to build an anchor for; any header greater than this value will be ignored
       * bodyPrefix    (string) :  ''    - Anything that should be inserted inside of the heading tag _before_ its anchor and content
       * bodySuffix    (string) :  ''    - Anything that should be inserted inside of the heading tag _after_ its anchor and content
-      * bootstrapToc  (bool)   : false  - Specify use of Bootstrap TOC Plugin (https://afeld.github.io/bootstrap-toc/).
-                                          Ensures that anchor content is not included in the TOC output.
 
     Output:
       The original HTML with the addition of anchors inside of all of the h1-h6 headings.
@@ -57,7 +57,6 @@
   {% assign maxHeader = include.h_max | default: 6 %}
   {% assign beforeHeading = include.beforeHeading %}
   {% assign nodes = include.html | split: '<h' %}
-  {% assign bootstrapToc = include.bootstrapToc %}
 
   {% capture edited_headings %}{% endcapture %}
 
@@ -94,9 +93,8 @@
     {% capture _hAttrToStrip %}{{ _workspace[0] | split: '>' | first }}>{% endcapture %}
     {% assign header = _workspace[0] | replace: _hAttrToStrip, '' %}
 
-    <!-- If using Bootstrap TOC plugin, assigns the header text to a "data-toc-text" attribute, so the anchor is not included in output. -->
-    {% if bootstrapToc %}
-      {% capture _hAttrToStrip %}{{ _hAttrToStrip | split: '>' | first }} data-toc-text="{{ header }}">{% endcapture %}
+    {% if include.headerAttrs %}
+      {% capture _hAttrToStrip %}{{ _hAttrToStrip | split: '>' | first }} {{ include.headerAttrs | replace: '%heading%', header | replace: '%html_id%', html_id }}">{% endcapture %}
     {% endif %}
     
     <!-- Build the anchor to inject for our heading -->
