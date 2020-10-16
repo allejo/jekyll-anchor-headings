@@ -94,7 +94,7 @@
     {% assign header = _workspace[0] | replace: _hAttrToStrip, '' %}
 
     {% if include.headerAttrs %}
-      {% capture _hAttrToStrip %}{{ _hAttrToStrip | split: '>' | first }} {{ include.headerAttrs | replace: '%heading%', header | replace: '%html_id%', html_id }}">{% endcapture %}
+      {% capture _hAttrToStrip %}{{ _hAttrToStrip | split: '>' | first }} {{ include.headerAttrs | replace: '%heading%', header | replace: '%html_id%', html_id }}>{% endcapture %}
     {% endif %}
     
     <!-- Build the anchor to inject for our heading -->
