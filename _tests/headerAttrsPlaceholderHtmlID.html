@@ -6,7 +6,7 @@
 {% endcapture %}
 {% assign text = markdown | markdownify %}
 
-{% include anchor_headings.html html=text headerAttrs='data-my-id-"%html_id%" data-orginal-title="My original title was &quot;%heading%&quot;"' %}
+{% include anchor_headings.html html=text headerAttrs='data-my-id="%html_id%" data-original-title="My original title was &quot;%heading%&quot;"' %}
 
 <!-- /// -->
 
