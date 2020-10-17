@@ -37,6 +37,8 @@
 
     Optional Parameters:
       * beforeHeading (bool)   : false  - Set to true if the anchor should be placed _before_ the heading's content
+      * headerAttrs   (string) :  ''    - Any custom HTML attributes that will be added to the heading tag; you may NOT use `id`;
+                                          the `%heading%` and `%html_id%` placeholders are available
       * anchorAttrs   (string) :  ''    - Any custom HTML attributes that will be added to the `<a>` tag; you may NOT use `href`, `class` or `title`;
                                           the `%heading%` and `%html_id%` placeholders are available
       * anchorBody    (string) :  ''    - The content that will be placed inside the anchor; the `%heading%` placeholder is available
@@ -95,6 +97,10 @@
     {% capture anchor %}{% endcapture %}
 
     {% if html_id and headerLevel >= minHeader and headerLevel <= maxHeader %}
+      {% if include.headerAttrs %}
+        {% capture _hAttrToStrip %}{{ _hAttrToStrip | split: '>' | first }} {{ include.headerAttrs | replace: '%heading%', header | replace: '%html_id%', html_id }}>{% endcapture %}
+      {% endif %}
+
       {% capture anchor %}href="#{{ html_id }}"{% endcapture %}
 
       {% if include.anchorClass %}

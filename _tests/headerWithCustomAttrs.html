@@ -1,0 +1,14 @@
+---
+# See https://github.com/allejo/jekyll-anchor-headings/issues/12
+---
+
+{% capture markdown %}
+# My Heading
+{% endcapture %}
+{% assign text = markdown | markdownify %}
+
+{% include anchor_headings.html html=text headerAttrs='data-something-or-other="hello, world!"' %}
+
+<!-- /// -->
+
+<h1 id="my-heading" data-something-or-other="hello, world!">My Heading <a href="#my-heading"></a></h1>
