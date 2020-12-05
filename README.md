@@ -24,6 +24,8 @@ As a part of my "Pure Liquid" series of Jekyll snippets, here is a Liquid snippe
 - ["Just the Docs" Jekyll theme](https://github.com/pmarsceill/just-the-docs/commit/03e2345833f92d6f3841db66bffd0f2ed8461bf2)
 - [Microsoft's TypeScript website](https://github.com/microsoft/TypeScript-Website/blob/52ca8592b221550af648fc0af9c231bf765eff8b/src/_includes/anchor_headings.html)
 - [VMWare's Octant documentation](https://github.com/vmware-tanzu/octant/commit/4db5dee7eeee6e580df9519b07907ac40dbd87b0#diff-e093f684d412b760130734e02973c4d7)
+- [TypeStrong's TypeDoc Website](https://github.com/TypeStrong/typedoc-site/commit/5a100f8faaa9cd34df69a12273be41c14856e2a6)
+- [Under Armour's Jekyll Theme](https://github.com/underarmour/uadocs-jekyll-theme/blob/b27a564cb054307d0209cf277c2d7fa713ceb683/_includes/toc.html)
 
 > **Want a Table of Contents in your Jekyll layouts without JavaScript or a plug-in?**
 >
