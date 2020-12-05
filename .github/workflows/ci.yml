@@ -31,10 +31,12 @@ jobs:
         with:
           ruby-version: '2.5'
 
+      - name: Install bundler
+        run: gem install bundler
+
       - name: Configure Jekyll
         if: matrix.jekyll-versions != '(GitHub Pages)'
         run: |
-          gem install bundler
           bundle add jekyll --version="~>${{ matrix.jekyll-versions }}"
 
       - name: Configure Jekyll for GitHub Pages
