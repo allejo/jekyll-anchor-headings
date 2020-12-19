@@ -35,7 +35,7 @@ As a part of my "Pure Liquid" series of Jekyll snippets, here is a Liquid snippe
 
 Alright, so how do you use it?
 
-1. Download the latest [`anchor_headings.html`](_includes/anchor_headings.html)
+1. Download the `anchor_headings.html` file from [the latest release](https://github.com/allejo/jekyll-anchor-headings/releases/latest) or [the master branch](_includes/anchor_headings.html)
 2. Toss that file in your `_includes` folder
 3. Where you typically would put `{{ content }}` in your layout, you would instead use this Liquid tag to output your page's content:
 
