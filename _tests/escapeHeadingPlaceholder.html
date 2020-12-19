@@ -1,0 +1,25 @@
+---
+# https://github.com/allejo/jekyll-anchor-headings/issues/27
+---
+
+{% capture markdown %}
+### The [**match**](#match) Expression
+{% endcapture %}
+{% assign text = markdown | markdownify %}
+
+{% include anchor_headings.html
+  beforeHeading=false
+  h_min=2
+  html=text
+  anchorClass="permalink icon-link"
+  anchorBody=""
+  anchorTitle="Permalink for '%heading%'"
+  anchorAttrs='data-heading="%heading%"'
+  headerAttrs='data-heading="%heading%"'
+%}
+
+<!-- /// -->
+
+<h3 id="the-match-expression" data-heading="The match Expression">
+  The <a href="#match"><strong>match</strong></a> Expression <a href="#the-match-expression" class="permalink icon-link" title="Permalink for 'The match Expression'" data-heading="The match Expression"></a>
+</h3>
