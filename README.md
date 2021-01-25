@@ -43,6 +43,10 @@ Alright, so how do you use it?
    {% include anchor_headings.html html=content anchorBody="#" %}
    ```
 
+### :wheelchair: Link Accessibility
+
+Accessibility is hard and there are many different ways someone may want to handle it. For that reason, this project does not force onto developers any method of handling accessibility. That being said, this project can be [configured to be accessible as seen in examples in the wiki](wiki/Link-Accessibility).
+
 ### :warning: Layout Inheritance
 
 If this snippet is used in a layout that is inherited by a child layout, it will apply to the child layout as well. If the child layout uses this snippet in addition to the parent layout, then heading anchors will be duplicated. You should only use this snippet in one layout.
