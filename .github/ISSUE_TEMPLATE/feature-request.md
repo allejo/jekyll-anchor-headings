@@ -1,0 +1,34 @@
+---
+name: Feature Request
+about: Want a new feature for this project?
+labels: enhancement
+
+---
+
+**Description**
+
+<!--
+  What would you like this new feature to do? The more detail the better!
+-->
+
+Write here.
+
+**Sample Usage**
+
+<!--
+  How do you envision developers using this feature in their Liquid?
+-->
+
+```twig
+{% include toc.html html=content %}
+```
+
+**Expected HTML**
+
+<!--
+  The HTML of the anchor headings you would expect to see with this new feature.
+-->
+
+```html
+
+```

@@ -1,10 +1,17 @@
-<!--
-  If you're submitting an issue with what was rendered by anchor_headings.html,
-  please follow this template.
+---
+name: Bug Report
+about: Something about your anchor links isn't being generated correctly
+labels: bug
 
-  If you're requesting a feature, feel free to discard this template and
-  describe the feature you're envisioning.
+---
+
+**Markdown Engine**
+
+<!--
+  Which markdown engine are you using? (e.g. kramdown, commonmark, redcarpet)
 -->
+
+Write here.
 
 **My Markdown**
 
@@ -34,7 +41,7 @@
 **Expected HTML**
 
 <!--
-  The HTML of the TOC you expected to see
+  The HTML of the anchor headings you expected to see
 -->
 
 ```html

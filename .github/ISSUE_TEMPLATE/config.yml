@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Usage Support
+    url: https://github.com/allejo/jekyll-anchor-headings/discussions
+    about: Ask and answer questions about how to use this snippet
