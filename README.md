@@ -45,7 +45,7 @@ Alright, so how do you use it?
 
 ### :wheelchair: Link Accessibility
 
-Accessibility is hard and there are many different ways someone may want to handle it. For that reason, this project does not force onto developers any method of handling accessibility. That being said, this project can be [configured to be accessible as seen in examples in the wiki](wiki/Link-Accessibility).
+Accessibility is hard and there are many different ways someone may want to handle it. For that reason, this project does not force onto developers any method of handling accessibility. That being said, this project can be [configured to be accessible as seen in examples in the wiki](https://github.com/allejo/jekyll-anchor-headings/wiki/Link-Accessibility).
 
 ### :warning: Layout Inheritance
 
