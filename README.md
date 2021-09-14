@@ -78,6 +78,7 @@ This snippet is highly customizable. Here are the available parameters to change
 | `h_max`         | int    | 6     | The maximum header level to build an anchor for; any header greater than this value will be ignored |
 | `bodyPrefix`    | string | ''    | Anything that should be inserted inside of the heading tag _before_ its anchor and content |
 | `bodySuffix`    | string | ''    | Anything that should be inserted inside of the heading tag _after_ its anchor and content |
+| `generateId`    | bool   | false | Set to true if a header without id should generate an id to use. |
 
 <sup>*</sup> This is a required parameter
 
