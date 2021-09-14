@@ -94,15 +94,15 @@
     {% assign escaped_header = header | strip_html | strip %}
 
     {% if _idWorkspace[1] %}
-    {% assign _idWorkspace = _idWorkspace[1] | split: '"' %}
-    {% assign html_id = _idWorkspace[0] %}
+      {% assign _idWorkspace = _idWorkspace[1] | split: '"' %}
+      {% assign html_id = _idWorkspace[0] %}
     {% elsif include.generateId %}
-    <!-- If the header did not have an id we create one. -->
-    {% assign html_id = escaped_header | slugify %}
-    {% if html_id == "" %}
-    {% assign html_id = false %}
-    {% endif %}
-    {% capture headerAttrs %}{{headerAttrs}} id="%html_id%"{% endcapture %}
+      <!-- If the header did not have an id we create one. -->
+      {% assign html_id = escaped_header | slugify %}
+      {% if html_id == "" %}
+        {% assign html_id = false %}
+      {% endif %}
+      {% capture headerAttrs %}{{ headerAttrs }} id="%html_id%"{% endcapture %}
     {% endif %}
 
     <!-- Build the anchor to inject for our heading -->
