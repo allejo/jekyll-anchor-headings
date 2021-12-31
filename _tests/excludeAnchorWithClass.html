@@ -1,0 +1,23 @@
+---
+# See https://github.com/allejo/jekyll-anchor-headings/issues/33
+---
+
+{% capture markdown %}
+# Heading 1
+
+# Heading 2
+{:.no_anchor}
+{% endcapture %}
+{% assign text = markdown | markdownify %}
+
+<div>
+  {% include anchor_headings.html html=text %}
+</div>
+
+<!-- /// -->
+
+<div>
+  <h1 id="heading-1">Heading 1 <a href="#heading-1"></a></h1>
+
+  <h1 class="no_anchor" id="heading-2">Heading 2</h1>
+</div>
