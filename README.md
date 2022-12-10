@@ -30,6 +30,9 @@ As a part of my "Pure Liquid" series of Jekyll snippets, here is a Liquid snippe
 - [Azure's IoT Identity Service](https://github.com/Azure/iot-identity-service/pull/204)
 - [CivicActions' Accessibility website](https://github.com/CivicActions/accessibility/pull/271)
 - [DuckDB's website](https://github.com/duckdb/duckdb-web/pull/48)
+- [json-scheme.org website](https://github.com/json-schema-org/json-schema-org.github.io/pull/461)
+- [termux.dev](https://github.com/termux/termux.github.io/commit/ec74c6f793cb9e06464cf2083018b4b72c1b2714)
+- [DependencyTrack](https://github.com/DependencyTrack/dependency-track/pull/1845)
 
 > **Want a Table of Contents in your Jekyll layouts without JavaScript or a plug-in?**
 >
