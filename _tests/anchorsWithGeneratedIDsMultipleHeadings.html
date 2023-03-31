@@ -1,0 +1,23 @@
+---
+# See: https://github.com/allejo/jekyll-anchor-headings/issues/38
+---
+
+{% capture text %}
+<div>
+  <h2 data-ignore-me="">Hello world</h2>
+  <h2 data-ignore-me="">Greetings world</h2>
+  <h2 data-ignore-me="">Sup world</h2>
+  <h2 data-ignore-me="">Yo world</h2>
+</div>
+{% endcapture %}
+
+{% include anchor_headings.html html=text generateId=true %}
+
+<!-- /// -->
+
+<div>
+  <h2 data-ignore-me="" id="hello-world">Hello world <a href="#hello-world"></a></h2>
+  <h2 data-ignore-me="" id="greetings-world">Greetings world <a href="#greetings-world"></a></h2>
+  <h2 data-ignore-me="" id="sup-world">Sup world <a href="#sup-world"></a></h2>
+  <h2 data-ignore-me="" id="yo-world">Yo world <a href="#yo-world"></a></h2>
+</div>
