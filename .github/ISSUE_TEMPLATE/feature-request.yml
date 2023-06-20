@@ -1,0 +1,34 @@
+name: Feature Request
+description: Want a new feature for this project?
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What would like this new feature to do? The more detail the better!
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-usage
+    attributes:
+      label: Proposed Usage
+      description: How do you envision developers using this feature in their Liquid?
+      value: |
+        ```twig
+        {% include liquid-snippet.html arg1=site.whatever %}
+        ```
+    validations:
+      required: true
+  - type: textarea
+    id: expected-html
+    attributes:
+      label: Expected HTML Output
+      description: The HTML you would expect to see generated with this new feature
+      value: |
+        ```html
+
+        ```
+    validations:
+      required: true
