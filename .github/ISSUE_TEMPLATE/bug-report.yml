@@ -24,7 +24,7 @@ body:
       placeholder: Tell us what you see!
       value: |
         ```twig
-        {% include liquid-snippet.html arg1=site.whatever %}
+        {% include anchor_headings.html arg1=site.whatever %}
         ```
     validations:
       required: true

@@ -17,7 +17,7 @@ body:
       description: How do you envision developers using this feature in their Liquid?
       value: |
         ```twig
-        {% include liquid-snippet.html arg1=site.whatever %}
+        {% include anchor_headings.html arg1=site.whatever %}
         ```
     validations:
       required: true
